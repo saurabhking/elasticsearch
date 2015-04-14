@@ -28,8 +28,7 @@ public class JavaAPIMain {
     public static void main(String args[]) throws IOException{
 
 
-    	Settings settings = ImmutableSettings.settingsBuilder().put("cluster.name", "elasticsearch").build();
-		 Client client = new TransportClient(settings).addTransportAddress(new InetSocketTransportAddress("192.168.0.9", 9300));
+    	Client client = ClientProvider.instance().getClient();
    
         
         client.prepareIndex("ui", "article", "1")

@@ -34,6 +34,7 @@ public class ClientProvider {
             synchronized (lock) {
                 if(null == instance){
                     instance = new ClientProvider();
+                    instance.prepareClient();
                 }
             }
         }

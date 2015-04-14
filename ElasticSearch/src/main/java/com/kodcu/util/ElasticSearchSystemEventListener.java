@@ -26,7 +26,7 @@ public class ElasticSearchSystemEventListener implements SystemEventListener {
             /* Preparing the ElasticSearch Client */
             System.out.println("*********************************************");
             System.out.println("Preparing the ElasticSearch Client");
-            ClientProvider.instance().prepareClient();
+            ClientProvider.instance();
             System.out.println("The ElasticSearch Client was prepared");
             System.out.println("*********************************************");
         }
